@@ -6,7 +6,8 @@ The files in this repository were used to configure the network depicted below.
 
 [RedTeam Network Diagram](https://github.com/dkrueger06/CS-Projects/issues/2#issue-923192878)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select files in the **ansible** folder may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select files in the [ansible](https://github.com/dkrueger06/CS-Projects/tree/main/ansible) folder may be used to install only certain pieces of it, such as Filebeat.
+
 
 
 
@@ -24,12 +25,12 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- Load Balancers help to protect servers against DDoS attacks.
-- A Jump Box allows controlled access to two or more seperate security zones.
+- _Load Balancers help to protect servers against DDoS attacks._
+- _A Jump Box allows controlled access to two or more seperate security zones._
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- Filebeat monitors log files and specified locations. It collects log events and sends them to either Elasticsearch or Logstash to be indexed.
-- Metricbeat collects metrics from the operating system and services running on the server and ships them to Elasticsearch or Logstash.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system metrics.
+- _Filebeat monitors log files and specified locations. It collects log events and sends them to either Elasticsearch or Logstash to be indexed._
+- _Metricbeat collects metrics from the operating system and services running on the server and ships them to Elasticsearch or Logstash._
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -46,10 +47,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the JumpBoxProvisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 24.1.39.119
+- _24.1.39.119_
 
 Machines within the network can only be accessed by SSH.
-- JumpBoxProvisioner, @24.1.39.119, has access to ElkBot1
+- _JumpBoxProvisioner, @24.1.39.119, has access to ElkBot1_
 
 A summary of the access policies in place can be found in the table below.
 
@@ -62,12 +63,12 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- Ansible playbooks can be used to push commands onto a group VMs simultaneously. Which saves valuable time, money, and brain cells.
 
 The playbook implements the following tasks:
-- Installs Docker
-- Installs Docker's Python module
-- Launches a Docker ELK container
+- _Installs Docker_
+- _Installs Docker's Python module_
+- _Launches a Docker ELK container_
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -75,11 +76,12 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- _Web-1 10.0.0.5_
+- _Web-2 10.0.0.6_
 
 We have installed the following Beats on these machines:
-- Filebeat on ElkBot1
-- Metricbeat on Web-1 and Web-2
+- _Filebeat on ElkBot1_
+- _Metricbeat on Web-1 and Web-2_
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
@@ -95,6 +97,6 @@ SSH into the control node and follow the steps below:
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- _http://40.114.114.133:5601/app/kibana_
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
