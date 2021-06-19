@@ -88,17 +88,28 @@ These Beats allow us to collect the following information from each machine:
 - _Filebeat collects log data such as syslog files which record system messages on a designated server._ 
 - _Metricbeat collects system data such as CPU or memory usage._
 
+Here is an example of what you may find with Metricbeat:
+![Metricbeat](https://github.com/dkrueger06/CS-Projects/blob/main/images/Metricbeat.PNG)
+
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Simply copy the **_install_elk_** file to **_ensure success._**
+- Update the **_hosts.yml_** file to include _the newly configured ELK machine._
+- Run the playbook, and navigate to **_your new ELK machine or the website listed below_** to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _http://40.114.114.133:5601/app/kibana_
+1. Which file is the playbook? Where do you copy it?
+   - _Files found in the /ansible/roles directory are the playbooks that will set up the Beats. Copy them into the /etc/ansible/ directory._
+2. Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+   - _Update the hosts.yml file to specify which machine to run your playbooks on._
+3. Which URL do you navigate to in order to check that the ELK server is running?
+   - _http://40.114.114.133:5601/app/kibana_
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+**Navigate to the location of your playbook and run ansible-playbook [insert name of playbook here]
+ - Example: 
+ - cd~ 
+ - cd /etc/ansible/roles 
+ - ansible-playbook filebeat-playbook.yml
