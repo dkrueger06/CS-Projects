@@ -113,3 +113,5 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
  - cd~ 
  - cd /etc/ansible/roles 
  - ansible-playbook filebeat-playbook.yml
+The output should look something like this:
+
