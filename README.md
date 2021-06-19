@@ -4,7 +4,7 @@ Course Projects
 
 The files in this repository were used to configure the network depicted below.
 
-[RedTeam Network Diagram](https://github.com/dkrueger06/CS-Projects/issues/2#issue-923192878)
+![RedTeam Network Diagram](/images/RedTeam Network Diagram)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select files in the [ansible](https://github.com/dkrueger06/CS-Projects/tree/main/ansible) folder may be used to install only certain pieces of it, such as Filebeat.
 
