@@ -57,9 +57,9 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 10.0.0.1 10.0.0.2    |
-| Web-1    | No                  |                      |
-| Web-2    | No                  |                      |
-| ElkBot1  | No                  |                      | 
+| Web-1    | No                  | 10.0.0.5             |
+| Web-2    | No                  | 10.0.0.6             |
+| ElkBot1  | No                  | 10.2.0.4             | 
 
 ### Elk Configuration
 
@@ -89,6 +89,7 @@ These Beats allow us to collect the following information from each machine:
 - _Metricbeat collects system data such as CPU or memory usage._
 
 Here is an example of what you may find with Metricbeat:
+
 ![Metricbeat](https://github.com/dkrueger06/CS-Projects/blob/main/images/Metricbeat.PNG)
 
 ### Using the Playbook
@@ -113,5 +114,8 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
  - cd~ 
  - cd /etc/ansible/roles 
  - ansible-playbook filebeat-playbook.yml
+
 The output should look something like this:
+
+![Output](https://github.com/dkrueger06/CS-Projects/blob/main/images/Output.PNG)
 
